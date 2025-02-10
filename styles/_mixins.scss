@@ -2,3 +2,21 @@
     display: grid;
     place-items: center;
 }
+
+@mixin background-image($url) {
+    background: {
+        image: url($url);
+        position: top center;
+        repeat: no-repeat;
+        size: cover;
+    }
+}
+
+@mixin fontsStyle ($size: 1rem, $weight: 500, $color: colors.$darkBlue ) {
+    font: {
+        size: $size;
+        weight: $weight;
+    }
+    
+    color: $color;
+}
