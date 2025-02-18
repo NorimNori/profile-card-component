@@ -3,12 +3,21 @@
     place-items: center;
 }
 
-@mixin background-image($url) {
-    background: {
-        image: url($url);
-        position: top center;
-        repeat: no-repeat;
-        size: cover;
+@mixin background-image($url1, $url2: null) {
+    @if $url2 {
+        background: {
+            image: url($url1), url($url2);
+            position: -50vw  -20vh, 50vw 52vh;
+            repeat: no-repeat, no-repeat;
+            size: 100%, 100%;
+        }
+    } @else {
+        background: {
+            image: url($url1);
+            position: top center;
+            repeat: no-repeat;
+            size: cover;
+        }
     }
 }
 

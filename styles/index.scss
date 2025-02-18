@@ -4,6 +4,17 @@
 
 @include styleFormatting.formatting;
 
+body {
+    @include mixins.background-image('./../images/bg-pattern-top.svg', './../images/bg-pattern-bottom.svg');
+
+    @media (min-width: 1024px) { // Este es el punto de ruptura para escritorio
+        background: {
+            position: -15vw  -62vh, 50vw 45vh;
+            size: 65%, 55%;
+        }
+    }
+}
+
 .profile-card{
     @include mixins.centerGrid;
     @include mixins.size(85vw);
